@@ -609,8 +609,8 @@ export default function DataQualityResults() {
 
       {/* Row Details Dialog */}
       <Dialog open={!!openRow} onOpenChange={(o) => !o && setOpenRow(null)}>
-        <DialogContent className="max-w-3xl">
-          {openRow && (
+        {openRow && (
+          <DialogContent className="max-w-3xl">
             <div className="space-y-4">
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2">
@@ -691,8 +691,8 @@ export default function DataQualityResults() {
                 </CardContent>
               </Card>
             </div>
-          )}
-        </DialogContent>
+          </DialogContent>
+        )}
       </Dialog>
     </div>
   );
